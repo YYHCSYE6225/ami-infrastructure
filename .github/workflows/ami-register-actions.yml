@@ -10,6 +10,10 @@ jobs:
     - uses: actions/checkout@master
       name: Checkout
 
+  uses: hashicorp/packer-github-actions@master
+      with: 
+        command: init
+
     - uses: hashicorp/packer-github-actions@master
       with: 
         command: build
