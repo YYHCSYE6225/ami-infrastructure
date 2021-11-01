@@ -11,6 +11,10 @@ variable "ssh_username" {
   type = string
 }
 
+variable "prod_id" {
+  type = string
+}
+
 packer {
   required_plugins {
     amazon = {
@@ -26,6 +30,7 @@ source "amazon-ebs" "ubuntu" {
   region        = "${var.region}"
   source_ami    = "${var.source_ami}"
   ssh_username  = "${var.ssh_username}"
+  ami_users=["${var.prod_id}"]
 }
 
 build {
