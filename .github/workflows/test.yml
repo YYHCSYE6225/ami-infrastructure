@@ -1,5 +1,6 @@
 name: ami validate action
-on : pull_request
+on : 
+push:
 jobs: 
   ami-validate:
     runs-on: ubuntu-latest
