@@ -1,0 +1,17 @@
+name: ami register action
+on : 
+  push:
+    branches:
+      - main
+jobs: 
+  ami-register:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      name: Checkout
+
+    - uses: hashicorp/packer-github-actions@master
+      with: 
+        command: build
+        arguments: -var-file=vars.pkrvars.hcl
+        target: aws-ubuntu.pkr.hcl
