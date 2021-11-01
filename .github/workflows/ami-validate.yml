@@ -8,9 +8,11 @@ jobs:
     -name: Checkout
     uses: actions/checkout@v2
 
-    -name: Validate packer
-    uses: hashicorp/packer-github-actions@master
-    with:
-      command: validate
-      arguments: -syntax-only
-      target: aws-ubuntu.pkr.hcl
+    -run: echo "test run"
+
+    # -name: Validate packer
+    # uses: hashicorp/packer-github-actions@master
+    # with:
+    #   command: validate
+    #   arguments: -syntax-only
+    #   target: aws-ubuntu.pkr.hcl
