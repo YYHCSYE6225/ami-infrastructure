@@ -53,7 +53,8 @@ build {
       "cd /home/ubuntu",
       "wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install",
       "chmod +x ./install",
-      "sudo ./install auto"
+      "sudo ./install auto",
+      "sudo apt install net-tools"
     ]
   }
 }
