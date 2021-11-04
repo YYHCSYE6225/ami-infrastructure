@@ -33,6 +33,7 @@ source "amazon-ebs" "ubuntu" {
   ami_users=["${var.prod_id}"]
 }
 
+
 build {
   name = "csye6225-packer"
   sources = [
